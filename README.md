@@ -18,6 +18,7 @@ How can HR act proactively?
 
 🧠 Solution Approach
 The project is built in four analytical layers:
+
   🔍 1️⃣ Exploratory HR Analytics
 Performed HR-focused EDA to uncover attrition patterns across:
 Overtime behavior
@@ -26,6 +27,7 @@ Job & environment satisfaction
 Employee tenure
 Work-life balance
 Key finding: Attrition is strongly linked to workload, satisfaction, and pay factors.
+
   🤖 2️⃣ Attrition Prediction (Supervised ML)
 Built classification models:
 Logistic Regression (baseline)
@@ -34,6 +36,7 @@ Enhancements:
 Class imbalance handling (class_weight="balanced")
 Confusion matrix & classification metrics
 ROC-AUC evaluation
+
   🧠 3️⃣ Explainable AI (SHAP)
 Applied SHAP explainability to interpret model predictions.
 SHAP enables:
@@ -41,6 +44,7 @@ Feature-level impact visualization
 Individual employee risk explanation
 Transparent HR decision support
 This converts the model from a black box → interpretable system.
+
   👥 4️⃣ Employee Segmentation (Unsupervised ML)
 Used KMeans clustering on scaled HR features:
 Income (log transformed)
@@ -53,6 +57,7 @@ Validation methods:
   Silhouette score
 PCA visualization
 Result: Distinct workforce segments with different attrition risk profiles.
+
   📈 5️⃣ HR Risk Scoring System
 Converted model probabilities into HR-usable categories:
 Probability	Risk Level
