@@ -2,9 +2,11 @@
 Predictive HR Analytics project combining attrition modeling, employee segmentation, explainable AI, and risk scoring to support data-driven retention strategy.
 
 📊 HR Analytics ML Project — Attrition Prediction & Employee Segmentation
+
 🚀 Project Overview
 This project builds an end-to-end HR Analytics machine learning framework to predict employee attrition risk and segment the workforce using behavioral and tenure features.
 The solution combines predictive modeling + clustering + explainable AI + risk scoring + dashboard deployment to move HR analytics from descriptive reporting to decision-ready intelligence.
+
 📌 Built using a public dataset for portfolio and learning purposes only.
 
 🎯 Business Problem
@@ -47,13 +49,13 @@ This converts the model from a black box → interpretable system.
 
   👥 4️⃣ Employee Segmentation (Unsupervised ML)
 Used KMeans clustering on scaled HR features:
-Income (log transformed)
-Tenure
-Satisfaction
-Experience
-Work-life balance
+Income (log transformed),
+Tenure,
+Satisfaction,
+Experience,
+Work-life balance,
 Validation methods:
-  Elbow method
+  Elbow method,
   Silhouette score
 PCA visualization
 Result: Distinct workforce segments with different attrition risk profiles.
@@ -68,24 +70,35 @@ Enables prioritization of retention interventions.
 
 🛠️ Tech Stack
 Python
-Pandas, NumPy
-SHAP
-KMeans Clustering
-PCA
-Matplotlib, Seaborn
+Pandas, NumPy,
+SHAP,
+KMeans Clustering,
+PCA,
+Matplotlib, Seaborn.
 
 📊 Key Insights
 -- Overtime is a major attrition risk signal
+
 -- Lower income bands show higher exit probability
+
 -- Satisfaction metrics act as early warning indicators
+
 -- Early-tenure employees are more vulnerable
+
 -- Workforce divides into behavior-based segments
+
 -- Prediction + segmentation together improves HR targeting
 
 💼 Business Impact
--- This framework enables HR teams to:
+
+This framework enables HR teams to:
+
 -- Detect attrition risk early
+
 -- Understand key drivers behind exits
+
 -- Segment employees by behavior patterns
+
 -- Apply targeted retention strategies
+
 -- Move toward predictive HR decision-making
