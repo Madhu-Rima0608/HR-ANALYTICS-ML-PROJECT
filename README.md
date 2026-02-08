@@ -1,104 +1,171 @@
-# HR-ANALYTICS-ML-PROJECT
-Predictive HR Analytics project combining attrition modeling, employee segmentation, explainable AI, and risk scoring to support data-driven retention strategy.
+# 📊 HR Analytics ML Project — Predicting Employee Attrition
 
-📊 HR Analytics ML Project — Attrition Prediction & Employee Segmentation
+## 🚀 Project Overview
 
-🚀 Project Overview
-This project builds an end-to-end HR Analytics machine learning framework to predict employee attrition risk and segment the workforce using behavioral and tenure features.
-The solution combines predictive modeling + clustering + explainable AI + risk scoring + dashboard deployment to move HR analytics from descriptive reporting to decision-ready intelligence.
+Employee attrition creates significant business challenges including replacement costs, productivity loss, and knowledge leakage. This project builds a People Analytics machine learning framework to **predict employee attrition risk** and translate HR data into actionable retention insights.
 
-📌 Built using a public dataset for portfolio and learning purposes only.
+The project combines exploratory data analysis, classification modeling, risk-focused evaluation, clustering-based segmentation, and SHAP explainability to create a decision-support approach for proactive HR strategy.
 
-🎯 Business Problem
-Employee attrition is costly and often detected too late.
-Traditional HR reports are descriptive, not predictive.
-This project answers:
-Who is at risk of leaving?
-What factors drive attrition?
-What employee segments exist?
-How can HR act proactively?
+> ⚠️ This is a personal learning project built using public/sample HR data. It is not connected to any proprietary organizational dataset.
 
-🧠 Solution Approach
-The project is built in four analytical layers:
+---
 
-  🔍 1️⃣ Exploratory HR Analytics
-Performed HR-focused EDA to uncover attrition patterns across:
-Overtime behavior
-Compensation levels
-Job & environment satisfaction
-Employee tenure
-Work-life balance
-Key finding: Attrition is strongly linked to workload, satisfaction, and pay factors.
+## 🎯 Business Objective
 
-  🤖 2️⃣ Attrition Prediction (Supervised ML)
-Built classification models:
-Logistic Regression (baseline)
-Random Forest (primary model)
-Enhancements:
-Class imbalance handling (class_weight="balanced")
-Confusion matrix & classification metrics
-ROC-AUC evaluation
+**Goal:** Identify employees with high attrition risk early so HR teams can take proactive retention actions instead of reactive replacement hiring.
 
-  🧠 3️⃣ Explainable AI (SHAP)
-Applied SHAP explainability to interpret model predictions.
-SHAP enables:
-Feature-level impact visualization
-Individual employee risk explanation
-Transparent HR decision support
-This converts the model from a black box → interpretable system.
+**Key Questions Addressed:**
 
-  👥 4️⃣ Employee Segmentation (Unsupervised ML)
-Used KMeans clustering on scaled HR features:
-Income (log transformed),
-Tenure,
-Satisfaction,
-Experience,
-Work-life balance,
-Validation methods:
-  Elbow method,
-  Silhouette score
-PCA visualization
-Result: Distinct workforce segments with different attrition risk profiles.
+* Which factors most influence employee attrition?
+* Can attrition risk be predicted using ML models?
+* How can model outputs be translated into HR decision signals?
+* Which employee segments show higher risk patterns?
 
-  📈 5️⃣ HR Risk Scoring System
-Converted model probabilities into HR-usable categories:
-Probability	Risk Level
-Low	< 0.30
-Medium	0.30–0.60
-High	> 0.60
-Enables prioritization of retention interventions.
+---
 
-🛠️ Tech Stack
-Python
-Pandas, NumPy,
-SHAP,
-KMeans Clustering,
-PCA,
-Matplotlib, Seaborn.
+## 🗂 Dataset Description
 
-📊 Key Insights
--- Overtime is a major attrition risk signal
+The dataset contains employee-level HR attributes including:
 
--- Lower income bands show higher exit probability
+* Demographics
+* Job role & department
+* Compensation features
+* Overtime exposure
+* Satisfaction & engagement indicators
+* Performance & tenure variables
 
--- Satisfaction metrics act as early warning indicators
+**Target Variable:** Attrition (Yes/No)
 
--- Early-tenure employees are more vulnerable
+---
 
--- Workforce divides into behavior-based segments
+## 🧠 Analytical Workflow
 
--- Prediction + segmentation together improves HR targeting
+### 1️⃣ Data Preparation
 
-💼 Business Impact
+* Data cleaning and preprocessing
+* Categorical encoding
+* Feature selection
+* Outlier and consistency checks
 
-This framework enables HR teams to:
+### 2️⃣ Exploratory Data Analysis (EDA)
 
--- Detect attrition risk early
+* Attrition distribution analysis
+* Overtime vs attrition patterns
+* Satisfaction vs retention trends
+* Behavioral driver exploration
 
--- Understand key drivers behind exits
+### 3️⃣ Modeling Approach
 
--- Segment employees by behavior patterns
+Two-model strategy used:
 
--- Apply targeted retention strategies
+**Logistic Regression**
 
--- Move toward predictive HR decision-making
+* High interpretability
+* Coefficient-level impact understanding
+
+**Random Forest**
+
+* Captures non-linear relationships
+* Stronger predictive performance
+
+### 4️⃣ Class Imbalance Handling
+
+* Addressed imbalance in attrition classes before model training
+* Prevented biased predictions toward majority class
+
+### 5️⃣ Risk-Focused Evaluation
+
+* Confusion matrix driven evaluation
+* Priority: **reduce false negatives** (missing high-risk employees)
+* Business-aligned metric interpretation
+
+### 6️⃣ Explainable AI (SHAP)
+
+* SHAP values used for feature-level explainability
+* Identified top drivers influencing attrition predictions
+* Improved model transparency for HR decision context
+
+### 7️⃣ Employee Segmentation (Clustering)
+
+* Behavioral clustering applied
+* Identified workforce segments with differing attrition risk patterns
+
+---
+
+## 💡 Key Insights
+
+* Employees with **higher overtime exposure** show elevated attrition probability
+* **Low job satisfaction** strongly correlates with exit likelihood
+* Engagement and workload variables act as early warning signals
+* Risk scoring approach supports proactive retention strategy
+
+---
+
+## 🛠 Tools & Technologies
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Matplotlib
+* Seaborn
+* SHAP
+* Jupyter Notebook
+
+---
+
+## ▶️ How to Run This Project
+
+### Step 1 — Clone the Repository
+
+```
+git clone https://github.com/Madhu-Rima0608/HR-ANALYTICS-ML-PROJECT.git
+```
+
+### Step 2 — Install Dependencies
+
+```
+pip install -r requirements.txt
+```
+
+### Step 3 — Open Notebook
+
+Open the Jupyter notebook file and run all cells sequentially.
+
+---
+
+## 📈 Project Outputs
+
+* Attrition prediction models
+* Feature importance analysis
+* SHAP explainability plots
+* Risk-focused evaluation metrics
+* Workforce segmentation insights
+* Business-oriented PPT summary
+
+---
+
+## 📌 Business Value
+
+This framework demonstrates how HR data can be transformed into:
+
+* Early attrition warning signals
+* Risk-based employee prioritization
+* Data-driven retention strategy inputs
+* Explainable ML for HR decision support
+
+---
+
+## 👩‍💻 Author
+
+**Madhurima Roy**
+Data Analytics & People Analytics Enthusiast
+
+LinkedIn: [https://www.linkedin.com/in/madhurima-roy-a48009249](https://www.linkedin.com/in/madhurima-roy-a48009249)
+GitHub: [https://github.com/Madhu-Rima0608](https://github.com/Madhu-Rima0608)
+
+---
+
+## ⭐ If You Found This Useful
+
+Consider starring the repository and sharing feedback or suggestions for improvement.
